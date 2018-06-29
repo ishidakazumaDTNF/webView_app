@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="webView_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJR-Dy-a7s">
+                                <rect key="frame" x="0.0" y="133" width="375" height="638"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rWx-48-fnN">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem tag="3" title="TOP" image="top" id="Zwi-e9-97S"/>
+                                    <tabBarItem title="自作1" image="icon1" id="AKV-ou-IzR"/>
+                                    <tabBarItem tag="1" title="自作2" image="icon2" id="g2u-CW-thH"/>
+                                    <tabBarItem tag="2" title="google" image="icon3" id="4Fq-sg-tdF"/>
+                                </items>
+                            </tabBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="2J3-R4-99k">
+                                <rect key="frame" x="169" y="327" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.29387921090000002" green="0.6471527815" blue="0.92945802209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="color" red="0.29387921090000002" green="0.6471527815" blue="0.92945802209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdV-6Z-i7n">
+                                <rect key="frame" x="0.0" y="45" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4K-wc-AcC">
+                                <rect key="frame" x="0.0" y="89" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="jKM-dJ-hCC">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="p67-Nk-9B4">
+                                            <connections>
+                                                <action selector="myGoBack:" destination="BYZ-38-t0r" id="OUB-WS-ECy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="myIndicator" destination="2J3-R4-99k" id="VUn-mg-Adg"/>
+                        <outlet property="myNavigationBar" destination="e4K-wc-AcC" id="gSa-wx-ikj"/>
+                        <outlet property="myNavigationBarItem" destination="jKM-dJ-hCC" id="3bg-69-2HU"/>
+                        <outlet property="mySearchBar" destination="qdV-6Z-i7n" id="SUW-kS-7Tp"/>
+                        <outlet property="myTabBar" destination="rWx-48-fnN" id="Uis-aC-015"/>
+                        <outlet property="myWebView" destination="CJR-Dy-a7s" id="LrY-Zp-UIj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon1" width="25" height="25"/>
+        <image name="icon2" width="25" height="25"/>
+        <image name="icon3" width="24" height="12"/>
+        <image name="top" width="21" height="16"/>
+    </resources>
+</document>
